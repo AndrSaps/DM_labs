@@ -23,11 +23,11 @@ namespace Labs_DM.Lab5
 
             List<List<int>> graph2 = new List<List<int>>
             {
-                new List<int>{ 0, 0, 1, 0, 1},
                 new List<int>{ 0, 0, 1, 1, 0},
+                new List<int>{ 0, 0, 1, 0, 1},
                 new List<int>{ 1, 1, 0, 0, 0},
-                new List<int>{ 0, 1, 0, 0, 1},
-                new List<int>{ 1, 0, 0, 1, 0}
+                new List<int>{ 1, 0, 0, 0, 1},
+                new List<int>{ 0, 1, 0, 1, 0}
             };
 
             Console.WriteLine("Graph 1");
@@ -47,7 +47,7 @@ namespace Labs_DM.Lab5
 
             Console.WriteLine("\nGraph 1");
             graph1.Display(headers);
-            Console.WriteLine("]nGraph 3");
+            Console.WriteLine("\nGraph 3");
             graph3.Display(headers);
             Console.WriteLine($"Isomorphic? {GraphIsomporphism(graph1, graph3)}");
         }
