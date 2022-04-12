@@ -137,7 +137,7 @@ namespace Labs_DM.Lab4
                     Console.ForegroundColor = ConsoleColor.Blue;
                     Channel node = Nodes[to].First(x => x.Name == from);
                     node.UsedWeight -= min;
-                    Console.Write($"({node.UsedWeight}/{node.RemainingWeight}) {node.Name} ");
+                    Console.Write($"({node.UsedWeight}/{node.RemainingWeight}) {to} ");
                     Console.ForegroundColor = ConsoleColor.White;
                 }
             }

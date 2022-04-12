@@ -6,7 +6,7 @@ namespace Labs_DM.Lab4
     {
         public static void Lab4_Execute()
         {
-            int[][] array = FileHelper.ReadFromFile("Lab4/Files/l4-1.txt", true);
+            int[][] array = FileHelper.ReadFromFile("Lab4/Files/l4-2.txt", true);
             char[] headers = StringHelper.GetNames(array.Length);
 
             GraphWithChannels graph = new GraphWithChannels();
