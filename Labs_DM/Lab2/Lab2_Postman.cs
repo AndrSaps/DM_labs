@@ -6,7 +6,7 @@ namespace Labs_DM.Lab2
     {
         public static void Lab2_Execute()
         {
-            int[][] array = FileHelper.ReadFromFile("Lab2/Files/l2-2.txt", true);
+            int[][] array = FileHelper.ReadFromFile("Lab2/Files/l2-1.txt", true);
             char[] headers = StringHelper.GetNames(array.Length);
 
             GraphWithPostman graph = new GraphWithPostman();

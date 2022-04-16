@@ -148,7 +148,7 @@ namespace Labs_DM.Lab3
             }
 
             Dictionary<char, int> minValues = notUsed
-                .ToDictionary(i => i.Key, x => x.Value.Count == nodes.Count() ? x.Value.Min(i => i.Weight) : 0);
+                .ToDictionary(i => i.Key, x => x.Value.Count > 0 ? x.Value.Min(i => i.Weight) : 0);
             weight += minValues.Sum(x => x.Value);
             Dictionary<char, List<Node>> transformed = notUsed
                 .ToDictionary(i => i.Key, j => j.Value.Select(x => new Node 
@@ -164,7 +164,7 @@ namespace Labs_DM.Lab3
             {
                 IEnumerable<Node> column = transformed.SelectMany(x => x.Value.Where(i => i.Name == node));
                 thirdStep += column.Count() > 0
-                    ? column.Max(x => x.Weight)
+                    ? column.Min(x => x.Weight)
                     : 0;
             }
             weight += thirdStep;
